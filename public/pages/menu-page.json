@@ -1,0 +1,26 @@
+{
+  "title": "DOCUMENTATION",
+  "intro": "Learn all about the CARTO Engine. An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.",
+  "contents": [{
+    "title": "Engine",
+    "description": "An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.",
+    "button": {
+      "logo": "images/logo1.png",
+      "name": "CARTO.js"
+    }
+  }, {
+    "title": "Location Data Services",
+    "description": "Employ our native SDKs to obtain maps and services on native applications, using them on the Web with open source JavaScript or 3rd party libraries.",
+    "button": {
+      "logo": "images/logo2.png",
+      "name": "Routing"
+    }
+  }, {
+    "title": "Builder",
+    "description": "An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.",
+    "button": {
+      "logo": "images/logo3.png",
+      "name": "Static"
+    }
+  }]
+}
