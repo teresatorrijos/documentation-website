@@ -10,7 +10,7 @@
     }
   }, {
     "title": "Location Data Services",
-    "description": "Employ our native SDKs to obtain maps and services on native applications, using them on the Web with open source JavaScript or 3rd party libraries.",
+    "description": "An Open Source tool that enables you to use several APIs to build advanced, dynamic geospatial datasets and scalable maps for your own applications.",
     "button": {
       "logo": "images/logo2.png",
       "name": "Routing"

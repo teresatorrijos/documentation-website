@@ -1,5 +1,5 @@
 <section class="container content-page">
-  <div class="col-xs-6 col-sm-3">
+  <div class="col-xs-12 col-sm-3 navigation">
     <ul class="nav flex-column .flex-sm-column menu">
       <% for (i=0; i < navigation.length; i++) { %>
         <li class="nav-item">
@@ -10,8 +10,8 @@
             <ul class="nav flex-column menu">
               <% for (j=0; j < navigation[i].level2.length; j++) { %>
                 <li class="nav-item">
-                  <!-- <img src="<%=navigation[i].level2[j].logo%>" alt=""> -->
                   <a class="nav-link" href="#">
+                    <img src="<%=navigation[i].level2[j].logo%>" alt="">
                     <%=navigation[i].level2[j].name%>
                   </a>
                 </li>
@@ -29,17 +29,17 @@
                   </li>
                 </ul>
               <% } %>
-        </li>
-        <% } %>
+          </li>
+      <% } %>
     </ul>
   </div>
 
-  <div class="col-xs-6 col-sm-9 block">
+  <div class="col-xs-12 col-sm-9 block">
     <h2><%= title %></h2>
     <p>
       <%= intro.paragraph %>
     </p>
-    <img src="<%= intro.image %>" alt="">
+    <img  class="img-responsive" src="<%= intro.image %>" alt="">
     <a href="#">
       <%= intro.link %>
     </a>
@@ -83,15 +83,14 @@
               <% } %>
 
                 <% if(contents[i].warning) { %>
-                  <div class="alert alert-success">
-                    <div class="col-md-1">
-                      <img src="<%=contents[i].warning.logo%>" alt="">
-                    </div>
-
+                  <div class="alert alert-success warning">
+                    <img src="<%=contents[i].warning.logo%>" alt="">
                     <% if(contents[i].warning.title) { %>
                       <h4><%=contents[i].warning.title%></h4>
                       <% } %>
-                        <%=contents[i].warning.text%>
+                        <p>
+                          <%=contents[i].warning.text%>
+                        </p>
                   </div>
                   <% } %>
                 <% } %>
