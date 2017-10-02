@@ -57,6 +57,10 @@ body {
   background-color: $main-color;
   height: 1000px;
 
+  a {
+    text-decoration: none;
+  }
+
   h1 {
     font-size: 6.2em;
     font-weight: 700;
@@ -203,6 +207,9 @@ body {
     font-size: 1.1em;
     font-weight: $font-weight-bold;
     padding-bottom: 5px;
+  }
+  a {
+    display: inline-block;
   }
 }
 
