@@ -24,14 +24,14 @@
       <% for (i=0; i < contents.length; i++) { %>
         <div class="col-xs-12 col-sm-4 col-md-4">
           <h3><%=contents[i].title%></h3>
-          <p>
-            <%=contents[i].description%>
-          </p>
-          <button onclick="window.location.href='/content001'" type="button" class="btn btn-default btn-lg">
-            <img src="<%= contents[i].button.logo %>"> <%=contents[i].button.name%>
-          </button>
+          <p><%=contents[i].description%></p>
+          <div class="hotspot container2 disabled">
+          </div>
+            <button onclick="window.location.href='/content001'" type="button" id="servicesButton" class="btn btn-default btn-lg">
+              <img src="<%= contents[i].button.logo %>"> <%=contents[i].button.name%>
+            </button>
         </div>
-        <% } %>
+      <% } %>
     </div>
   </div>
 </section>

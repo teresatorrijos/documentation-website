@@ -77,7 +77,18 @@ header {
     font-weight: 700;
     color: white;
     text-align: center;
-    padding-top: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -300px;
+  }
+
+  .container1 {
+    height: 200px;
+    width: 1000px;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -500px;
   }
 }
 
@@ -137,26 +148,33 @@ header {
 
   p {
     padding-top: 15px;
+    line-height: 1.7;
     font-family: $secondary-font;
     font-weight: $font-weight-light;
-    line-height: 1.7;
   }
 
   button {
     width: 100%;
-    text-align: left;
     height: 58px;
-    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
     border: 0.25px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    text-align: left;
     font-size: 1.05em;
     font-weight: $font-weight-bold;
     margin-top: 25px;
     margin-bottom: 70px;
+    z-index: 1;
+    position: relative;
   }
 
   button img {
     padding-right: 15px;
     vertical-align: middle;
+  }
+
+  .container2 {
+    height: 110px;
+    width: 98%;
   }
 }
 
@@ -208,8 +226,8 @@ header {
 
 .block {
   h2 {
-    font-weight: 800;
     margin-top: 0;
+    font-weight: 800;
     font-size: 1.7em;
   }
 
@@ -230,9 +248,9 @@ header {
   }
 
   h4 {
+    padding-bottom: 5px;
     font-size: 1.1em;
     font-weight: $font-weight-bold;
-    padding-bottom: 5px;
   }
 
   a {
@@ -286,6 +304,34 @@ header {
     padding-top: 15px;
   }
 }
+
+.hotspot {
+  background-color: #947DFA;
+  border: 1px solid #0000cc;
+  position: absolute;
+  z-index: 4;
+}
+
+.disabled {
+  display: none;
+}
+
+.fade-element {
+  opacity: 0;
+  animation: fade 1s linear;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.65;
+  }
+}
+
 @media (max-width: 900px) {
   .intro {
     margin-top: 70px;
@@ -298,13 +344,10 @@ header {
   .content-page {
     padding-top: 20px;
   }
-
-  .intro-page h1 {
-    padding-top: 220px;
-  }
 }
-@media (min-width: 600px) and (max-width: 800px) {
+
+@media (max-width: 600px) {
   .intro-page h1 {
-    padding-top: 450px;
+    margin: -95px 0 0 -170px;
   }
 }

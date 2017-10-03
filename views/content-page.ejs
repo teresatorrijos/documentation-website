@@ -15,84 +15,69 @@
                     <%=navigation[i].level2[j].name%>
                   </a>
                 </li>
-                <% } %>
-            </ul>
-            <% } %>
-              <% if(navigation[i].level3) { %>
-                <ul class="nav flex-column sublist">
-                  <li class="nav-item">
-                    <% for (t=0; t < navigation[i].level3.length; t++) { %>
-                      <a class="nav-link" href="#">
-                        <%=navigation[i].level3[t]%>
-                      </a>
-                      <% } %>
-                  </li>
-                </ul>
               <% } %>
-          </li>
+            </ul>
+          <% } %>
+          <% if(navigation[i].level3) { %>
+            <ul class="nav flex-column sublist">
+              <li class="nav-item">
+                <% for (t=0; t < navigation[i].level3.length; t++) { %>
+                  <a class="nav-link" href="#">
+                    <%=navigation[i].level3[t]%>
+                  </a>
+                  <% } %>
+              </li>
+            </ul>
+          <% } %>
+        </li>
       <% } %>
     </ul>
   </div>
 
   <div class="col-xs-12 col-sm-9 block">
     <h2><%= title %></h2>
-    <p>
-      <%= intro.paragraph %>
-    </p>
+    <p><%= intro.paragraph %></p>
     <img  class="img-responsive" src="<%= intro.image %>" alt="">
-    <a href="#">
-      <%= intro.link %>
-    </a>
-
+    <a href="#"><%= intro.link %></a>
     <% for (i=0; i < contents.length; i++) { %>
       <div class="content">
         <h3> <%= contents[i].title %> </h3>
         <% for (j=0; j < contents[i].paragraphs.length; j++) { %>
-          <p>
-            <%= contents[i].paragraphs[j] %>
-          </p>
-          <% } %>
-            <% if(contents[i].table) { %>
-              <table class="table table-bordered">
-                <thead>
-                  <tr>
-                    <% for (j=0; j < contents[i].table.heads.length; j++) { %>
-                      <th>
-                        <p>
-                          <%= contents[i].table.heads[j] %>
-                        </p>
-                      </th>
-                      <% } %>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% for (t=0; t < contents[i].table.rows.length; t++) { %>
-                    <tr>
-                      <td>
-                        <p><pre> <%=contents[i].table.rows[t][0]%> </pre></p>
-                      </td>
-                      <td>
-                        <p>
-                          <%=contents[i].table.rows[t][1]%>
-                        </p>
-                      </td>
-                    </tr>
-                    <% } %>
-                </tbody>
-              </table>
-              <% } %>
+          <p><%= contents[i].paragraphs[j] %></p>
+        <% } %>
 
-                <% if(contents[i].warning) { %>
-                  <div class="alert alert-success warning">
-                    <img src="<%=contents[i].warning.logo%>" alt="">
-                    <% if(contents[i].warning.title) { %>
-                      <h4><%=contents[i].warning.title%></h4>
-                      <% } %>
-                        <p>
-                          <%=contents[i].warning.text%>
-                        </p>
-                  </div>
-                  <% } %>
+        <% if(contents[i].table) { %>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <% for (j=0; j < contents[i].table.heads.length; j++) { %>
+                  <th><p><%= contents[i].table.heads[j] %></p></th>
                 <% } %>
-      </div>
+              </tr>
+            </thead>
+            <tbody>
+              <% for (t=0; t < contents[i].table.rows.length; t++) { %>
+                <tr>
+                  <td>
+                    <p><pre> <%=contents[i].table.rows[t][0]%> </pre></p>
+                  </td>
+                  <td><p><%=contents[i].table.rows[t][1]%></p></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        <% } %>
+
+        <% if(contents[i].warning) { %>
+          <div class="alert alert-success warning">
+            <img src="<%=contents[i].warning.logo%>" alt="">
+            <% if(contents[i].warning.title) { %>
+              <h4><%=contents[i].warning.title%></h4>
+            <% } %>
+              <p><%=contents[i].warning.text%></p>
+          </div>
+          <% } %>
+        </div>
+      <% } %>
+    </div>
 </section>
