@@ -15,56 +15,7 @@
 </head>
 
 <body>
-  <% if(nav) {%>
-    <header>
-      <nav class="navbar navbar-default white">
-        <div class="container header">
-          <div class="navbar-header ">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-              <img src="images/logo.png"> ACME <span>CORP.</span>
-            </a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="#">Builder</a></li>
-              <li><a href="#">Engine</a></li>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Solutions <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Page 1</a></li>
-                  <li><a href="#">Page 2</a></li>
-                  <li><a href="#">Page 3</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Login</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <% if(subnav) {%>
-          <div class="container navbar navbar-default subnav">
-            <ul class="nav navbar-nav">
-              <li><a href="#">Documentation</a></li>
-              <li><a class="it-disabled" href="#">Guides</a></li>
-              <li><a class="it-disabled" href="#">Tutorials</a></li>
-              <li><a class="it-disabled" href="#">Support</a></li>
-            </ul>
-          </div>
-        <% } %>
-    </header>
-    <% } %>
-
-      <%- body %>
+  <%- body %>
 </body>
 
 </html>

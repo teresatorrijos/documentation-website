@@ -4,8 +4,6 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   res.render('intro', {
-    nav: false,
-    subnav: false,
     title: "CODE TEST"
   });
 });
@@ -15,8 +13,6 @@ router.get('/menu', (req, res) => {
     if(err) return console.log(err);
     let state = JSON.parse(data);
     res.render('menu-page', {
-      nav: true,
-      subnav: true,
       title: state.title,
       intro: state.intro,
       contents: state.contents
@@ -29,8 +25,6 @@ router.get('/content001', (req, res) => {
     if(err) return console.log(err);
     let state = JSON.parse(data);
     res.render('content-page', {
-      nav: true,
-      subnav: false,
       navigation: state.navigation,
       title: state.title,
       intro: state.intro,
